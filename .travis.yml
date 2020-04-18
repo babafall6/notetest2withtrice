@@ -3,14 +3,14 @@ services:
   - docker
 
 script:
-  - docker build -t babafall/node .
-  - docker images babafall/node
+  - docker build -t pbfall/node2 .
+  - docker images pbfall/node2
 
 before_deploy:
   - docker login -u DOCKER_USERNAME -p DOCKER_PASSWORD
 
   deploy:
     provider: script
-    script: docker push DOCKER_USERNAM/ note_travis_ci
+    script: docker push DOCKER_USERNAM/note_travis_ci
     on:
       branch: master
