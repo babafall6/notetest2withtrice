@@ -11,6 +11,6 @@ before_deploy:
 
   deploy:
     provider: script
-    script: docker push DOCKER_USERNAM/note_travis_ci
+    script: docker push DOCKER_USERNAME/note_travis_ci
     on:
       branch: master
