@@ -3,5 +3,12 @@ services:
   - docker
 
 script:
-  - docker build -t babafall/node2 .
-  - docker images babafall/node2
+  - docker build -t babafall/node .
+  - docker images babafall/node
+
+before_deploy:
+  - docker login -u pbfall -p PBf-Odd-1990
+
+  deploy:
+    provider: script
+    script: docker push pbfall/testnode
