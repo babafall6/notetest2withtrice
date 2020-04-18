@@ -7,10 +7,10 @@ script:
   - docker images pbfall/node2
 
 before_deploy:
-  - docker login -u DOCKER_USERNAME -p DOCKER_PASSWORD
+  - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
   deploy:
     provider: script
-    script: docker push DOCKER_USERNAME/note_travis_ci
+    script: docker push $DOCKER_USERNAME/note_travis_ci
     on:
       branch: master
