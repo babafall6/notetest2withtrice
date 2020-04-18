@@ -7,10 +7,10 @@ script:
   - docker images babafall/node
 
 before_deploy:
-  - docker login -u user -p pwd
+  - docker login -u DOCKER_USERNAME -p DOCKER_PASSWORD
 
   deploy:
     provider: script
-    script: docker push user/repersitory
+    script: docker push DOCKER_USERNAM/ note_travis_ci
     on:
       branch: master
