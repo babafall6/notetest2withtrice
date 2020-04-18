@@ -7,8 +7,10 @@ script:
   - docker images babafall/node
 
 before_deploy:
-  - docker login -u pbfall -p PBf-Odd-1990
+  - docker login -u user -p pwd
 
   deploy:
     provider: script
-    script: docker push pbfall/testnode
+    script: docker push user/repersitory
+    on:
+      branch: master
