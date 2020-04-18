@@ -1,0 +1,7 @@
+sudo: required
+services:
+  - docker
+
+script:
+  - docker build -t babafall/node2 .
+  - docker images babafall/node2
