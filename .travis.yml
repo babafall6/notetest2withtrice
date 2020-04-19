@@ -3,8 +3,8 @@ services:
   - docker
 
 script:
-  - docker build -t pbfall/nodetestwithtravis .
-  - docker images pbfall/nodetestwithtravis
+  - docker build -t pbfall/node .
+  - docker images pbfall/node
 
 before_deploy:
   - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
